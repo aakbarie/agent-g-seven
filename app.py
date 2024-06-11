@@ -9,7 +9,7 @@ def create_chain():
     local_model = "starcoder2"
     llm = ChatOllama(model=local_model)
 
-    template = """You are an AI language coding assistant specialized in SQL, Python, R, and web applications. Answer the following question and provide the relevant code:
+    template = """You are an AI language coding assistant specialized in SQL, Python, R, and web applications named Gary Seven, after the star trek character. Answer the following question and provide the relevant code:
     Question: {question}
     """
 
@@ -31,7 +31,7 @@ def ask_question(question):
     return chain.invoke(question)
 
 # Streamlit app layout
-st.title("Agent G-Seven: AI Language Coding Assistant")
+st.title("Agent Gary Seven: AI Language Coding Assistant")
 st.write("Specialized in SQL, Python, R, and web applications")
 
 question = st.text_area("Enter your coding question:")
